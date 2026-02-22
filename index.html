@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop Kim Cương</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f2f2f2;
+}
+.header{
+    background:#ff4757;
+    color:white;
+    text-align:center;
+    padding:15px;
+    font-size:20px;
+    font-weight:bold;
+}
+.container{
+    max-width:400px;
+    margin:auto;
+    padding:15px;
+}
+.card{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom:15px;
+}
+input,select{
+    width:100%;
+    padding:10px;
+    margin:6px 0;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+button{
+    padding:8px 12px;
+    background:#ff4757;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+button:hover{
+    background:#e84118;
+}
+.package{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#f1f2f6;
+    padding:10px;
+    border-radius:8px;
+    margin:6px 0;
+}
+
+/* Popup */
+.popup{
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    background:rgba(0,0,0,0.4);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+.popup-box{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    width:250px;
+    text-align:center;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<div class="header">SHOP.ACC.COM</div>
+
+<div class="container">
+
+<div class="card">
+<h3>Nhập ID Game</h3>
+<input type="text" placeholder="Nhập ID của bạn">
+</div>
+
+<div class="card">
+<h3>Nạp Thẻ</h3>
+
+<select>
+<option>Viettel</option>
+<option>Mobifone</option>
+<option>Vinaphone</option>
+<option>Vietnamobile</option>
+<option>Zing</option>
+<option>Garena</option>
+</select>
+
+<select>
+<option>10.000đ</option>
+<option>20.000đ</option>
+<option>50.000đ</option>
+<option>100.000đ</option>
+<option>200.000đ</option>
+<option>500.000đ</option>
+</select>
+
+<input type="text" placeholder="Nhập số seri">
+<input type="text" placeholder="Nhập mã thẻ">
+
+<button onclick="napThe()">Nạp Thẻ</button>
+</div>
+
+<div class="card">
+<h3>Shop Kim Cương</h3>
+
+<div class="package">
+<span>20.000đ = 566 Kim Cương</span>
+<button onclick="muaKC()">Mua</button>
+</div>
+
+<div class="package">
+<span>50.000đ = 899 Kim Cuơng</span>
+<button onclick="muaKC()">Mua</button>
+</div>
+
+<div class="package">
+<span>100.000đ = 2803 Kim Cương</span>
+<button onclick="muaKC()">Mua</button>
+</div>
+
+<div class="package">
+<span>200.000đ = 6999 Kim Cương</span>
+<button onclick="muaKC()">Mua</button>
+</div>
+
+<div class="package">
+<span>500.000đ = 9999 Kim Cương</span>
+<button onclick="muaKC()">Mua</button>
+</div>
+
+</div>
+
+</div>
+
+<div class="popup" id="popup">
+<div class="popup-box">
+<p id="popupText"></p>
+</div>
+</div>
+
+<script>
+function napThe(){
+    let popup=document.getElementById("popup");
+    document.getElementById("popupText").innerText=
+    "Đang xử lý vui lòng đợi, cảm ơn bạn!";
+    popup.style.display="flex";
+    setTimeout(()=>{popup.style.display="none";},3000);
+}
+
+function muaKC(){
+    // Không hiện gì
+}
+</script>
+
+</body>
+</html>
